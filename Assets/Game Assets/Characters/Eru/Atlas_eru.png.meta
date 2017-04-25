@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: 610cdb34b8c4d6b49a16e3e27ab9cf87
+timeCreated: 1493143345
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eru_Forearm.R
+    21300002: Eur_Thigh.L
+    21300004: Eru_Hips
+    21300006: Eur_Head
+    21300008: Eru_Arm.R
+    21300010: Eru_Deco
+    21300012: Eru_Arm.L
+    21300014: Eru_Leg.L
+    21300016: Eru_Thigh.R
+    21300018: Eru_Leg.R
+    21300020: Eru_Forearm.L
+    21300022: Eru_Body
+    21300024: Eru_Hair
+    21300026: Eru_scarf
+    21300028: Eru_Neck
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eru_Forearm.R
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 902
+        width: 186
+        height: 83
+      alignment: 9
+      pivot: {x: 0.90071374, y: 0.77865344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eur_Thigh.L
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 697
+        width: 165
+        height: 277
+      alignment: 9
+      pivot: {x: 0.43589145, y: 0.9788111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Hips
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 789
+        width: 176
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eur_Head
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 755
+        width: 195
+        height: 227
+      alignment: 9
+      pivot: {x: 0.7773087, y: 0.16584812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Arm.R
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 650
+        width: 90
+        height: 201
+      alignment: 9
+      pivot: {x: 0.7616967, y: 0.9514789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Deco
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 389
+        width: 80
+        height: 329
+      alignment: 9
+      pivot: {x: 0.39720076, y: 0.9729661}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Arm.L
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 472
+        width: 94
+        height: 236
+      alignment: 9
+      pivot: {x: 0.3549928, y: 0.97756493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Leg.L
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 404
+        width: 57
+        height: 188
+      alignment: 9
+      pivot: {x: 0.63724583, y: 0.86586195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Thigh.R
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 356
+        width: 168
+        height: 270
+      alignment: 9
+      pivot: {x: 0.4010551, y: 0.97358173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Leg.R
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 147
+        width: 73
+        height: 186
+      alignment: 9
+      pivot: {x: 0.6699961, y: 0.83787227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Forearm.L
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 319
+        width: 189
+        height: 76
+      alignment: 9
+      pivot: {x: 0.8713598, y: 0.8324645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Body
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 60
+        width: 120
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Hair
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 140
+        width: 180
+        height: 144
+      alignment: 9
+      pivot: {x: 0.4443739, y: 0.11441019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_scarf
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 113
+        width: 128
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5711131, y: 0.8582879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eru_Neck
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 69
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: Eru
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

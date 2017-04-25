@@ -1,24 +1,24 @@
 fileFormatVersion: 2
-guid: 610cdb34b8c4d6b49a16e3e27ab9cf87
-timeCreated: 1493121691
+guid: 64467cabf9d051d40a348206dd5dfb95
+timeCreated: 1493144311
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Eru_Forearm.R
-    21300002: Eur_Thigh.L
-    21300004: Eru_Hips
-    21300006: Eur_Head
-    21300008: Eru_Arm.R
-    21300010: Eru_Deco
-    21300012: Eru_Arm.L
-    21300014: Eru_Leg.L
-    21300016: Eru_Thigh.R
-    21300018: Eru_Leg.R
-    21300020: Eru_Forearm.L
-    21300022: Eru_Body
-    21300024: Eru_Hair
-    21300026: Eru_scarf
-    21300028: Eru_Neck
+    21300000: Hari_Forearm.L
+    21300002: Hari_Thigh.L
+    21300004: Hari_Hips
+    21300006: Hari_Head
+    21300008: Hari_Arm.L
+    21300010: Hari.Thigh.R
+    21300012: Hari_Deco
+    21300014: Hari_Arm.R
+    21300016: Hari_Leg.R
+    21300018: Hari_Leg.L
+    21300020: Hari_Body
+    21300022: Hari_Hair
+    21300024: Hari_Forearm.R
+    21300026: Hari_Scarf
+    21300028: Hari_Neck
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -85,202 +85,202 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eru_Forearm.R
+      name: Hari_Forearm.L
       rect:
         serializedVersion: 2
-        x: 28
-        y: 902
-        width: 186
-        height: 83
+        x: 35
+        y: 898
+        width: 185
+        height: 82
       alignment: 9
-      pivot: {x: 0.90071374, y: 0.77865344}
+      pivot: {x: 0.32305953, y: 0.7846992}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eur_Thigh.L
+      name: Hari_Thigh.L
       rect:
         serializedVersion: 2
-        x: 279
-        y: 697
-        width: 165
-        height: 277
+        x: 280
+        y: 713
+        width: 164
+        height: 269
       alignment: 9
-      pivot: {x: 0.43589145, y: 0.9788111}
+      pivot: {x: 0.35584837, y: 0.97647536}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Hips
+      name: Hari_Hips
       rect:
         serializedVersion: 2
-        x: 512
-        y: 789
-        width: 176
-        height: 159
+        x: 524
+        y: 816
+        width: 177
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eur_Head
+      name: Hari_Head
       rect:
         serializedVersion: 2
-        x: 761
-        y: 755
-        width: 195
-        height: 227
+        x: 760
+        y: 736
+        width: 217
+        height: 245
       alignment: 9
-      pivot: {x: 0.7773087, y: 0.16584812}
+      pivot: {x: 0.3817777, y: 0.11422144}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Arm.R
+      name: Hari_Arm.L
       rect:
         serializedVersion: 2
-        x: 76
-        y: 650
+        x: 82
+        y: 645
         width: 90
         height: 201
       alignment: 9
-      pivot: {x: 0.7616967, y: 0.9514789}
+      pivot: {x: 0.1859977, y: 0.89983374}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Deco
+      name: Hari.Thigh.R
       rect:
         serializedVersion: 2
-        x: 582
-        y: 389
-        width: 80
-        height: 329
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Eru_Arm.L
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 472
-        width: 94
-        height: 236
+        x: 276
+        y: 384
+        width: 170
+        height: 269
       alignment: 9
-      pivot: {x: 0.3549928, y: 0.97756493}
+      pivot: {x: 0.5398364, y: 0.9639693}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Leg.L
+      name: Hari_Deco
       rect:
         serializedVersion: 2
-        x: 78
-        y: 404
+        x: 567
+        y: 440
+        width: 81
+        height: 329
+      alignment: 9
+      pivot: {x: 0.6280849, y: 0.9743884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hari_Arm.R
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 484
+        width: 93
+        height: 238
+      alignment: 9
+      pivot: {x: 0.6805978, y: 0.9229067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hari_Leg.R
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 409
         width: 57
         height: 188
       alignment: 9
-      pivot: {x: 0.63724583, y: 0.86586195}
+      pivot: {x: 0.334183, y: 0.84917694}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Thigh.R
+      name: Hari_Leg.L
       rect:
         serializedVersion: 2
-        x: 295
-        y: 356
-        width: 168
-        height: 270
+        x: 90
+        y: 148
+        width: 74
+        height: 188
       alignment: 9
-      pivot: {x: 0.4010551, y: 0.97358173}
+      pivot: {x: 0.2627984, y: 0.85192025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Leg.R
+      name: Hari_Body
       rect:
         serializedVersion: 2
-        x: 70
-        y: 147
-        width: 73
-        height: 186
-      alignment: 9
-      pivot: {x: 0.6699961, y: 0.83787227}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Eru_Forearm.L
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 319
-        width: 189
-        height: 76
-      alignment: 9
-      pivot: {x: 0.8713598, y: 0.8324645}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Eru_Body
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 60
-        width: 120
-        height: 174
+        x: 301
+        y: 160
+        width: 121
+        height: 176
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Hair
+      name: Hari_Hair
       rect:
         serializedVersion: 2
-        x: 543
-        y: 140
-        width: 180
-        height: 144
+        x: 523
+        y: 192
+        width: 150
+        height: 168
       alignment: 9
-      pivot: {x: 0.4443739, y: 0.11441019}
+      pivot: {x: 0.9770797, y: 0.3714069}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_scarf
+      name: Hari_Forearm.R
       rect:
         serializedVersion: 2
-        x: 804
-        y: 113
-        width: 128
-        height: 94
+        x: 772
+        y: 322
+        width: 192
+        height: 75
       alignment: 9
-      pivot: {x: 0.5711131, y: 0.8582879}
+      pivot: {x: 0.06398996, y: 0.7880481}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Neck
+      name: Hari_Scarf
       rect:
         serializedVersion: 2
-        x: 76
-        y: 40
-        width: 69
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 814
+        y: 152
+        width: 127
+        height: 96
+      alignment: 9
+      pivot: {x: 0.12789124, y: 0.7953612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hari_Neck
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 56
+        width: 73
+        height: 36
+      alignment: 9
+      pivot: {x: 0.7034586, y: 0.087430105}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
-  spritePackingTag: Eru
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

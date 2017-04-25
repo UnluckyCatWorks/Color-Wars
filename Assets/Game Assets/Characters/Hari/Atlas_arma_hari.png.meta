@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: ff40ddc47c1dbf34da08bc18b35bb5a7
-timeCreated: 1493121805
+timeCreated: 1493144436
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Eru_Arma
-    21300002: Eru_Arma_Deco
+    21300000: Hari_Arma
+    21300002: Hari_Arma_Deco
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -72,7 +72,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eru_Arma
+      name: Hari_Arma
       rect:
         serializedVersion: 2
         x: 44
@@ -85,7 +85,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Eru_Arma_Deco
+      name: Hari_Arma_Deco
       rect:
         serializedVersion: 2
         x: 104

@@ -100,6 +100,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4883352151194696}
   - component: {fileID: 95700665376554362}
+  - component: {fileID: 65319912069830174}
+  - component: {fileID: 54209119446640294}
+  - component: {fileID: 114448197632584862}
   m_Layer: 0
   m_Name: Hari
   m_TagString: Untagged
@@ -545,7 +548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409329477339736}
   m_LocalRotation: {x: 0.017124925, y: -0.016781352, z: 0.0022913176, w: 0.9997099}
-  m_LocalPosition: {x: -1.86, y: 5.97, z: -0.51}
+  m_LocalPosition: {x: -1.84, y: 5.991, z: -1.116}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4726860987977358}
@@ -581,6 +584,33 @@ Transform:
   m_Father: {fileID: 4271942409155226}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.315001}
+--- !u!54 &54209119446640294
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409329477339736}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 56
+  m_CollisionDetection: 0
+--- !u!65 &65319912069830174
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409329477339736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3844354, y: 9.505215, z: 0.99999994}
+  m_Center: {x: 0.07669434, y: 4.7154474, z: 0}
 --- !u!95 &95700665376554362
 Animator:
   serializedVersion: 3
@@ -598,6 +628,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114448197632584862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409329477339736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc53c591cc327be4dae7e99194f683d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerType: 0
+  speed: 15
 --- !u!119 &119888085233132996
 Projector:
   m_ObjectHideFlags: 1
@@ -611,7 +654,7 @@ Projector:
   m_FieldOfView: 60
   m_AspectRatio: 1
   m_Orthographic: 1
-  m_OrthographicSize: 1.55
+  m_OrthographicSize: 0.98
   m_Material: {fileID: 2100000, guid: e30ff3588e719f34bbf0c66f22d97487, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2

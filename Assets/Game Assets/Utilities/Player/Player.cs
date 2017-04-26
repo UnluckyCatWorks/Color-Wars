@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	private CharacterController player;
+	private Animator anim;
 
 	public enum PlayerType 
 	{
@@ -18,40 +18,57 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		// THESE ARE ALL ONLY TESTS
-		if ( playerType == PlayerType.Gamepad )
-			throw new System.NotImplementedException ();
-
 		Movement ();
-		RotateCam ();
+		Correct ();
+
+		if ( playerType == PlayerType.Gamepad )
+		{
+			
+		}
+		else
+		if ( playerType == PlayerType.Keyboard )
+		{
+
+		}
 	}
 
-	void Movement () 
+	int facingDirection=1;
+	void Movement ()
 	{
-		// First person movement - tests
-		var mov = Vector3.zero;
-		if ( Input.GetKey ( KeyCode.W ) ) mov += transform.forward;
-		if ( Input.GetKey ( KeyCode.S ) ) mov -= transform.forward;
-		if ( Input.GetKey ( KeyCode.A ) ) mov -= transform.right;
-		if ( Input.GetKey ( KeyCode.D ) ) mov += transform.right;
-		mov = mov.normalized * speed;
-
-		player.SimpleMove ( mov );
-	}
-	void RotateCam ()
-	{
-		var cam = Camera.main.transform;
-		cam.Rotate ( cam.right, Input.GetAxis ( "Mouse Y" ) * 270 * Time.deltaTime );
-		transform.Rotate ( cam.up, Input.GetAxis ( "Mouse X" ) * 120 * Time.deltaTime );
-		// fml
-		var euler = transform.localEulerAngles;
-		var euler2 = cam.transform.localEulerAngles;
-		transform.localEulerAngles = new Vector3 ( 0, euler.y, 0 );
-		cam.transform.localEulerAngles = new Vector3 ( euler2.x, 0, 0 );
+		var x = Input.GetAxis ( "Horizontal" ) * speed * Time.deltaTime;
+		if ( x!=0 )
+		{
+			var newDir = (x < 0) ? -1 : 1;
+			// Correct orientation
+			if ( newDir != facingDirection )
+			{
+				transform.rotation *= Quaternion.Euler ( 0, 180, 0 );
+				facingDirection = newDir;
+			}
+			// Move player
+			transform.Translate ( -transform.right * x );
+		}
 	}
 
-	void Awake ()
+	void Correct ()
 	{
-		player = GetComponent<CharacterController> ();
+		var hit = new RaycastHit ();
+		if ( Physics.Raycast ( transform.position + transform.up * 0.1f, -transform.up, out hit, 0.15f ) )
+		{
+			// Rotate along surface normal
+			var rot = Quaternion.LookRotation ( hit.normal, Vector3.forward );
+			transform.rotation = rot * Quaternion.Euler ( 90, 0, 0 ) * Quaternion.Euler ( 0, 180, 0 );
+		}
+		else
+		{
+			// If not colliding, means in-air
+			// Apply gravity
+			transform.Translate ( 0, -9.81f * Time.deltaTime, 0 );
+		}
+	}
+
+	void Awake () 
+	{
+		anim = GetComponent<Animator> ();
 	}
 }

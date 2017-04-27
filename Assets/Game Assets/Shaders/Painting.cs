@@ -24,7 +24,7 @@ public class Painting : MonoBehaviour
 		}
 	}
 
-	public ParticleSystem ps;
+	private ParticleSystem ps;
 	private List<ParticleCollisionEvent> cols;
 	void Start ()
 	{

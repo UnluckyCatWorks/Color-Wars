@@ -9,7 +9,7 @@ Shader "Projector/ProjectAlpha"
 	}
 	Subshader
 	{
-		Tags { "Queue"="Transparent+1"}
+		Tags { "Queue"="Transparent"}
 		Pass
 		{
 			ZWrite Off

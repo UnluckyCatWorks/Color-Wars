@@ -25,6 +25,7 @@ ModelImporter:
     100034: stone_r
     100036: suelo
     100038: CAM
+    100040: grass
     400000: arbol_1
     400002: arbol_2
     400004: arbol_3
@@ -45,6 +46,7 @@ ModelImporter:
     400034: stone_r
     400036: suelo
     400038: CAM
+    400040: grass
     2300000: arbol_1
     2300002: arbol_2
     2300004: arbol_3
@@ -64,6 +66,7 @@ ModelImporter:
     2300032: stone_r
     2300034: suelo
     2300036: CAM
+    2300038: grass
     3300000: arbol_1
     3300002: arbol_2
     3300004: arbol_3
@@ -83,6 +86,7 @@ ModelImporter:
     3300032: stone_r
     3300034: suelo
     3300036: CAM
+    3300038: grass
     4300000: seta
     4300002: stone_r
     4300004: stone_l
@@ -102,6 +106,7 @@ ModelImporter:
     4300032: arbol_2
     4300034: arbol_3
     4300036: CAM
+    4300038: grass
   materials:
     importMaterials: 1
     materialName: 0

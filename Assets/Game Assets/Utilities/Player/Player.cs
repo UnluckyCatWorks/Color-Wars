@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
 	private Rigidbody body;
 	private Animator anim;
+	private string type;
 
 	public enum PlayerType 
 	{
@@ -16,39 +17,38 @@ public class Player : MonoBehaviour
 	public PlayerType playerType;
 
 	[Header ( "Settings" )]
-	public ParticleSystem paint;
 	public float speed;
+	public float jumpForce;
 
 	/// Animator Params
+	bool moving
+	{
+		get { return anim.GetBool ( "Moving" ); }
+		set { anim.SetBool ( "Moving", value ); }
+	}
 	bool grounded 
 	{
 		get { return anim.GetBool ( "Grounded" ); }
-		set { anim.SetBool ( "Grounded", true ); }
+		set { anim.SetBool ( "Grounded", value ); }
 	}
 
 	void Update ()
 	{
-		Movement ();
+		Movement ( Input.GetAxis ( type+"Horizontal" ) );
 		Correct ();
 
-		if ( playerType == PlayerType.Gamepad )
-		{
+		if ( Input.GetButtonDown ( type+"Jump" ) ) Jump ();
+	}
 
-		}
-		else
-		if ( playerType == PlayerType.Keyboard )
-		{
-			if (Input.GetMouseButtonDown ( 0 ) )
-			{
-				paint.Play ();
-			}
-		}
+	void Jump ()
+	{
+		body.AddForceAtPosition ( transform.up * jumpForce, transform.position, ForceMode.Impulse );
 	}
 
 	int facingDirection=1;
-	void Movement () 
+	void Movement ( float axis ) 
 	{
-		var x = Input.GetAxis ( "Horizontal" ) * speed * Time.deltaTime;
+		var x = axis * speed * Time.deltaTime;
 		if ( x!=0 )
 		{
 			var newDir = (x < 0) ? -1 : 1;
@@ -72,8 +72,7 @@ public class Player : MonoBehaviour
 			// Rotate along Z axis to align
 			// to surface
 			var rot = Quaternion.LookRotation ( transform.forward, hit.normal );
-			body.rotation = rot;
-			//body.position = hit.point + transform.up * 0.1f;
+			this.AsyncLerp<Transform> ( "rotation", rot, 0.15f, transform );
 		}
 		else
 		{
@@ -86,5 +85,9 @@ public class Player : MonoBehaviour
 	{
 		body = GetComponent<Rigidbody> ();
 		anim = GetComponent<Animator> ();
+
+		if ( playerType == PlayerType.Gamepad ) type = "G_";
+		else
+		if ( playerType == PlayerType.Keyboard ) type = "";
 	}
 }

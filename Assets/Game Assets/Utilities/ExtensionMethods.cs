@@ -27,10 +27,10 @@ namespace etc
 		#endregion
 
 		#region MONO
-		public static IEnumerator AsyncLerp ( this MonoBehaviour m, Type type, string value, float target, float duration, UnityEngine.Object parent = null )
+		public static IEnumerator AsyncLerp<T> ( this MonoBehaviour m, string value, float target, float duration, UnityEngine.Object parent = null )
 		{
 			// Reflection
-			var param = type.GetProperty ( value );
+			var param = typeof(T).GetProperty ( value );
 			var original = ( float ) param.GetValue ( parent, null );
 
 			var start = Time.time;
@@ -45,10 +45,10 @@ namespace etc
 				yield return null;
 			}
 		}
-		public static IEnumerator AsyncLerp ( this MonoBehaviour m, Type type, string value, Color target, float duration, UnityEngine.Object parent = null )
+		public static IEnumerator AsyncLerp<T> ( this MonoBehaviour m, string value, Color target, float duration, UnityEngine.Object parent = null )
 		{
 			// Reflection
-			var param = type.GetProperty ( value );
+			var param = typeof(T).GetProperty ( value );
 			var original = ( Color ) param.GetValue ( parent, null );
 
 			var start = Time.time;
@@ -63,10 +63,10 @@ namespace etc
 				yield return null;
 			}
 		}
-		public static IEnumerator AsyncLerp ( this MonoBehaviour m, Type type, string value, Quaternion target, float duration, UnityEngine.Object parent = null ) 
+		public static IEnumerator AsyncLerp<T> ( this MonoBehaviour m, string value, Quaternion target, float duration, UnityEngine.Object parent = null ) 
 		{
 			// Reflection
-			var param = type.GetProperty ( value );
+			var param = typeof(T).GetProperty ( value );
 			var original = (Quaternion) param.GetValue ( parent, null );
 
 			var start = Time.time;

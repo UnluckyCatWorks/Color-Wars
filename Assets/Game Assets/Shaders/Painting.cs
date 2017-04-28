@@ -42,7 +42,7 @@ public class Painting : MonoBehaviour
 			if ( tag == "Player" )
 			{
 				var player = cols[i].colliderComponent.transform.parent.GetComponent<Player> ();
-				player.hp += 0.1f;
+				player.hp += 0.065f;
 			}
 		}
 	}

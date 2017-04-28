@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
+//		if (Input.GetKeyDown ( KeyCode.Escape ))
+//			FindObjectOfType<Game> ().Pause ();
+
 		Movement ();
 		CheckFall ();
 		CheckJump ();
@@ -52,12 +55,21 @@ public class Player : MonoBehaviour
 		CheckHP ();
 	}
 
+	bool _win;
 	void CheckHP ()
 	{
 		for ( var s=0; s!=10; s++ )
 		{
 			if (hp > s) splatters[s].SetActive ( true );
 			else		splatters[s].SetActive ( false );
+		}
+
+		if ( hp >= 11 && !_win )
+		{
+			var win = playerType == PlayerType.WASD ? "Hari" : "Eru";
+			var lose = playerType == PlayerType.WASD ? "Eru" : "Hari";
+			_win=true;
+			FindObjectOfType<Game> ().Win ( win, lose );
 		}
 	}
 
@@ -154,7 +166,7 @@ public class Player : MonoBehaviour
 		if ( v.y > 0 ) falling = true;
 	}
 
-	void Awake () 
+	void Start () 
 	{
 		body = GetComponent<Rigidbody> ();
 		anim = GetComponent<Animator> ();

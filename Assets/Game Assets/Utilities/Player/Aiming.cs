@@ -36,7 +36,7 @@ public class Aiming : MonoBehaviour
 		return q;
 	}
 
-	void Awake () 
+	void Start () 
 	{
 		// Find foe
 		var player = GetComponent<Player> ();

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Painter
+  - Paintable
   layers:
   - Default
   - TransparentFX
@@ -15,12 +17,12 @@ TagManager:
   - 
   - Players
   - Ground
-  - Props
+  - Prop
   - Paint
-  - H1
-  - H2
-  - H3
-  - H4
+  - Walk
+  - Painter
+  - 
+  - 
   - 
   - 
   - 

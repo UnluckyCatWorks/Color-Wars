@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Aiming : MonoBehaviour
 {
-	private Player player;
+	private Player foe;
 
 	[Header ( "References" )]
 	public Transform body;
@@ -13,30 +14,32 @@ public class Aiming : MonoBehaviour
 
 	[Header ( "Constraints" )]
 	public float maxBody;
-	public float minBody;
 	public float maxArms;
-	public float minArms;
 
 	void LateUpdate ()
 	{
-		if ( player.playerType == Player.PlayerType.Keyboard )
-		{
-			/// Rotate body
-			var rot = -Input.GetAxis ( "Mouse Y" ) * 5f;
-			var alt = -Input.GetAxis ( "Mouse X" ) * 2f;
-			body.localRotation *= Quaternion.Euler ( 0, 0, rot + alt );
-		}
-		else
-		if ( player.playerType == Player.PlayerType.Gamepad )
-		{
+		body.localRotation = AimBody ();
+	}
 
-		}
+	Quaternion AimBody () 
+	{
+		var invert = transform.position.x > foe.transform.position.x;
+		var q = Quaternion.FromToRotation
+		(
+			Vector3.right * ( invert ? -1 : 1 ),
+			foe.transform.position - transform.position
+		);
+
+		if ( transform.eulerAngles.y >= 179 )
+			q = Quaternion.Inverse ( q );
+
+		return q;
 	}
 
 	void Awake () 
 	{
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
-		player = GetComponent<Player> ();
+		// Find foe
+		var player = GetComponent<Player> ();
+		foe = FindObjectsOfType<Player> ().First ( x => x.playerType != player.playerType );
 	}
 }

@@ -26,6 +26,15 @@ ModelImporter:
     100036: suelo
     100038: CAM
     100040: grass
+    100042: walk_floor
+    100044: walk_hoja1
+    100046: walk_hoja3
+    100048: walk_pincho1
+    100050: walk_pincho2
+    100052: walk_ramita2
+    100054: walk_ramita3
+    100056: walk_seta
+    100058: walk_ramita1
     400000: arbol_1
     400002: arbol_2
     400004: arbol_3
@@ -47,6 +56,15 @@ ModelImporter:
     400036: suelo
     400038: CAM
     400040: grass
+    400042: walk_floor
+    400044: walk_hoja1
+    400046: walk_hoja3
+    400048: walk_pincho1
+    400050: walk_pincho2
+    400052: walk_ramita2
+    400054: walk_ramita3
+    400056: walk_seta
+    400058: walk_ramita1
     2300000: arbol_1
     2300002: arbol_2
     2300004: arbol_3
@@ -67,6 +85,15 @@ ModelImporter:
     2300034: suelo
     2300036: CAM
     2300038: grass
+    2300040: walk_floor
+    2300042: walk_hoja1
+    2300044: walk_hoja3
+    2300046: walk_pincho1
+    2300048: walk_pincho2
+    2300050: walk_ramita2
+    2300052: walk_ramita3
+    2300054: walk_seta
+    2300056: walk_ramita1
     3300000: arbol_1
     3300002: arbol_2
     3300004: arbol_3
@@ -87,6 +114,15 @@ ModelImporter:
     3300034: suelo
     3300036: CAM
     3300038: grass
+    3300040: walk_floor
+    3300042: walk_hoja1
+    3300044: walk_hoja3
+    3300046: walk_pincho1
+    3300048: walk_pincho2
+    3300050: walk_ramita2
+    3300052: walk_ramita3
+    3300054: walk_seta
+    3300056: walk_ramita1
     4300000: seta
     4300002: stone_r
     4300004: stone_l
@@ -107,6 +143,15 @@ ModelImporter:
     4300034: arbol_3
     4300036: CAM
     4300038: grass
+    4300040: walk_floor
+    4300042: walk_hoja3
+    4300044: walk_hoja1
+    4300046: walk_ramita3
+    4300048: walk_ramita2
+    4300050: walk_pincho2
+    4300052: walk_pincho1
+    4300054: walk_seta
+    4300056: walk_ramita1
   materials:
     importMaterials: 1
     materialName: 0

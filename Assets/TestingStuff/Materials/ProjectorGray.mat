@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 685e60494b1714c42a144f9615d9593f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -72,7 +72,7 @@ Material:
     - first:
         name: _ShadowTex
       second:
-        m_Texture: {fileID: 2800000, guid: 9e5c619b033c03042a827ac0c47ae77c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 685e60494b1714c42a144f9615d9593f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

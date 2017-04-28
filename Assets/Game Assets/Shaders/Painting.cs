@@ -5,6 +5,7 @@ using UnityEngine;
 public class Painting : MonoBehaviour
 {
 	public GameObject projector;
+	public Texture2D[] splatters;
 
 	// Instantiate color splatter
 	void OnParticleCollision ( GameObject other )
@@ -23,13 +24,21 @@ public class Painting : MonoBehaviour
 			else
 			if ( tag == "Painter" )
 			{
-				var p = cols[i].colliderComponent.GetComponent<Projector> ();
+				var c = cols[i].colliderComponent.transform;
+				var p = c.parent.GetComponent<Projector> ();
 
-				if ( p.fieldOfView <= 80f )
+				if (p.fieldOfView <= 105f)
 				{
 					p.fieldOfView += 0.5f;
-					p.transform.localScale += new Vector3 ( 0.005f, 0.005f, 0 );
+					var cRot = c.rotation;
+					p.transform.rotation *= Quaternion.Euler ( -0.3f, 0, 0 );
+					c.rotation = cRot;
 				}
+
+				if ( p.fieldOfView <= 80f )
+					c.transform.localScale += new Vector3 ( 0.005f, 0.005f, 0 );
+
+
 			}
 			else
 			if ( tag == "Player" )

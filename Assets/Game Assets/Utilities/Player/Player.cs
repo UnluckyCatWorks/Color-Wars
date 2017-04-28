@@ -19,8 +19,10 @@ public class Player : MonoBehaviour
 	[Header ( "References" )]
 	public PlayerType playerType;
 	public ParticleSystem paint;
+	public GameObject[] splatters;
 
 	[Header ( "Settings" )]
+	public float hp;
 	public float speed;
 	public float jumpForce;
 
@@ -47,6 +49,16 @@ public class Player : MonoBehaviour
 		CheckFall ();
 		CheckJump ();
 		CheckFire ();
+		CheckHP ();
+	}
+
+	void CheckHP ()
+	{
+		for ( var s=0; s!=10; s++ )
+		{
+			if (hp > s) splatters[s].SetActive ( true );
+			else		splatters[s].SetActive ( false );
+		}
 	}
 
 	void CheckFire ()

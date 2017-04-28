@@ -35,15 +35,14 @@ public class Painting : MonoBehaviour
 					c.rotation = cRot;
 				}
 
-				if ( p.fieldOfView <= 80f )
+				if (p.fieldOfView <= 80f)
 					c.transform.localScale += new Vector3 ( 0.005f, 0.005f, 0 );
-
-
 			}
 			else
 			if ( tag == "Player" )
 			{
-
+				var player = cols[i].colliderComponent.transform.parent.GetComponent<Player> ();
+				player.hp += 0.1f;
 			}
 		}
 	}

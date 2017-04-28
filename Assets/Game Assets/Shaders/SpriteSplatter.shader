@@ -1,9 +1,8 @@
-Shader "Custom/Sprite"
+Shader "Custom/Sprite splatter"
 {
 	Properties
 	{
-		[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
-		_Color ("Tint", Color) = (1,1,1,1)
+		[PerRendererData] _MainTex ("Splatter Texture", 2D) = "white" {}
 		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
 	}
 
@@ -11,18 +10,11 @@ Shader "Custom/Sprite"
 	{
 		Tags
 		{ 
-			"Queue"="Transparent+1" 
+			"Queue"="Transparent+2" 
 			"IgnoreProjector"="True" 
 			"RenderType"="Transparent" 
 			"PreviewType"="Plane"
 			"CanUseSpriteAtlas"="True"
-		}
-
-		Stencil
-		{
-			Ref 1
-			Comp  Always
-			Pass  Replace
 		}
 
 		Cull Off
@@ -30,7 +22,13 @@ Shader "Custom/Sprite"
 		ZWrite Off
 		ZTest Always
 
-		Blend One OneMinusSrcAlpha, Zero OneMinusSrcAlpha
+		Stencil
+		{
+			Ref 1
+			Comp Equal
+		}
+
+		Blend Zero One, One Zero
 		Pass 
 		{
 		CGPROGRAM
@@ -55,8 +53,6 @@ Shader "Custom/Sprite"
 			float2 texcoord  : TEXCOORD0;
 			UNITY_VERTEX_OUTPUT_STEREO
 		};
-			
-		fixed4 _Color;
 
 		v2f vert(appdata_t IN)
 		{
@@ -65,7 +61,6 @@ Shader "Custom/Sprite"
 			UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
 			OUT.vertex = UnityObjectToClipPos(IN.vertex);
 			OUT.texcoord = IN.texcoord;
-			OUT.color = IN.color * _Color;
 			#ifdef PIXELSNAP_ON
 			OUT.vertex = UnityPixelSnap (OUT.vertex);
 			#endif
@@ -74,12 +69,10 @@ Shader "Custom/Sprite"
 		}
 
 		sampler2D _MainTex;
-
 		fixed4 frag(v2f IN) : SV_Target
 		{
-			fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
+			fixed4 c = tex2D(_MainTex, IN.texcoord);
 			c.rgb *= c.a;
-			if ( c.a < 0.5f ) discard;
 			return c;
 		}
 		ENDCG

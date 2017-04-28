@@ -6,7 +6,7 @@
 	}
 	SubShader
 	{
-		Tags { "Queue"="Transparent+2" }
+		Tags { "Queue"="Transparent+3" }
 
 		// No culling or depth
 		Cull Off

@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 17ad3b3985b448049b48dd2d9d465c06
+timeCreated: 1493149760
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arbol_1
+    100002: arbol_2
+    100004: arbol_3
+    100006: camara
+    100008: hoja_1
+    100010: hoja_2
+    100012: hoja_3
+    100014: //RootNode
+    100016: pincho_1
+    100018: pincho_2
+    100020: rama
+    100022: rama_pinchos
+    100024: ramita_1
+    100026: ramita_2
+    100028: ramita_3
+    100030: seta
+    100032: stone_l
+    100034: stone_r
+    100036: suelo
+    100038: CAM
+    100040: grass
+    100042: walk_floor
+    100044: walk_hoja1
+    100046: walk_hoja3
+    100048: walk_pincho1
+    100050: walk_pincho2
+    100052: walk_ramita2
+    100054: walk_ramita3
+    100056: walk_seta
+    100058: walk_ramita1
+    400000: arbol_1
+    400002: arbol_2
+    400004: arbol_3
+    400006: camara
+    400008: hoja_1
+    400010: hoja_2
+    400012: hoja_3
+    400014: //RootNode
+    400016: pincho_1
+    400018: pincho_2
+    400020: rama
+    400022: rama_pinchos
+    400024: ramita_1
+    400026: ramita_2
+    400028: ramita_3
+    400030: seta
+    400032: stone_l
+    400034: stone_r
+    400036: suelo
+    400038: CAM
+    400040: grass
+    400042: walk_floor
+    400044: walk_hoja1
+    400046: walk_hoja3
+    400048: walk_pincho1
+    400050: walk_pincho2
+    400052: walk_ramita2
+    400054: walk_ramita3
+    400056: walk_seta
+    400058: walk_ramita1
+    2300000: arbol_1
+    2300002: arbol_2
+    2300004: arbol_3
+    2300006: camara
+    2300008: hoja_1
+    2300010: hoja_2
+    2300012: hoja_3
+    2300014: pincho_1
+    2300016: pincho_2
+    2300018: rama
+    2300020: rama_pinchos
+    2300022: ramita_1
+    2300024: ramita_2
+    2300026: ramita_3
+    2300028: seta
+    2300030: stone_l
+    2300032: stone_r
+    2300034: suelo
+    2300036: CAM
+    2300038: grass
+    2300040: walk_floor
+    2300042: walk_hoja1
+    2300044: walk_hoja3
+    2300046: walk_pincho1
+    2300048: walk_pincho2
+    2300050: walk_ramita2
+    2300052: walk_ramita3
+    2300054: walk_seta
+    2300056: walk_ramita1
+    3300000: arbol_1
+    3300002: arbol_2
+    3300004: arbol_3
+    3300006: camara
+    3300008: hoja_1
+    3300010: hoja_2
+    3300012: hoja_3
+    3300014: pincho_1
+    3300016: pincho_2
+    3300018: rama
+    3300020: rama_pinchos
+    3300022: ramita_1
+    3300024: ramita_2
+    3300026: ramita_3
+    3300028: seta
+    3300030: stone_l
+    3300032: stone_r
+    3300034: suelo
+    3300036: CAM
+    3300038: grass
+    3300040: walk_floor
+    3300042: walk_hoja1
+    3300044: walk_hoja3
+    3300046: walk_pincho1
+    3300048: walk_pincho2
+    3300050: walk_ramita2
+    3300052: walk_ramita3
+    3300054: walk_seta
+    3300056: walk_ramita1
+    4300000: seta
+    4300002: stone_r
+    4300004: stone_l
+    4300006: suelo
+    4300008: rama_pinchos
+    4300010: pincho_1
+    4300012: pincho_2
+    4300014: rama
+    4300016: ramita_1
+    4300018: ramita_2
+    4300020: camara
+    4300022: ramita_3
+    4300024: hoja_1
+    4300026: hoja_2
+    4300028: hoja_3
+    4300030: arbol_1
+    4300032: arbol_2
+    4300034: arbol_3
+    4300036: CAM
+    4300038: grass
+    4300040: walk_floor
+    4300042: walk_hoja3
+    4300044: walk_hoja1
+    4300046: walk_ramita3
+    4300048: walk_ramita2
+    4300050: walk_pincho2
+    4300052: walk_pincho1
+    4300054: walk_seta
+    4300056: walk_ramita1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

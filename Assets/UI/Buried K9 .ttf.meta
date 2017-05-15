@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ec9371a098d23f04785322184cfea78f
+timeCreated: 1493317373
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BuriedK9
+  fontNames:
+  - BuriedK9
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

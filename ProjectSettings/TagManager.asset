@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Painter
+  - Paintable
+  - Hari
+  - Eru
   layers:
   - Default
   - TransparentFX
@@ -13,12 +17,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Players
+  - Ground
+  - Prop
+  - Paint
+  - Walk
+  - Painter
   - 
   - 
   - 
@@ -40,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Eru
+    uniqueID: 404310415
+    locked: 0
+  - name: Hari
+    uniqueID: 923088647
+    locked: 0
+  - name: Splatters
+    uniqueID: 1387979859
     locked: 0

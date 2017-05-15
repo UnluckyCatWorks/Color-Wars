@@ -1,57 +1,190 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using etc;
 
 public class Player : MonoBehaviour
 {
-	private CharacterController player;
+	private Rigidbody body;
+	private Animator anim;
+	private string type;
+	private Player foe;
 
 	public enum PlayerType 
 	{
-		Keyboard,
-		Gamepad
+		WASD,
+		ARROWS
 	}
+
+	[Header ( "References" )]
 	public PlayerType playerType;
+	public ParticleSystem paint;
+	public GameObject[] splatters;
 
 	[Header ( "Settings" )]
+	public float hp;
 	public float speed;
+	public float jumpForce;
+
+	/// Animator Params
+	bool moving 
+	{
+		get { return anim.GetBool ( "Moving" ); }
+		set { anim.SetBool ( "Moving", value ); }
+	}
+	bool grounded 
+	{
+		get { return anim.GetBool ( "Grounded" ); }
+		set { anim.SetBool ( "Grounded", value ); }
+	}
+	bool falling 
+	{
+		get { return anim.GetBool ( "Falling" ); }
+		set { anim.SetBool ( "Falling", value ); }
+	}
 
 	void Update ()
 	{
-		// THESE ARE ALL ONLY TESTS
-		if ( playerType == PlayerType.Gamepad )
-			throw new System.NotImplementedException ();
+//		if (Input.GetKeyDown ( KeyCode.Escape ))
+//			FindObjectOfType<Game> ().Pause ();
 
 		Movement ();
-		RotateCam ();
+		CheckFall ();
+		CheckJump ();
+		CheckFire ();
+		CheckHP ();
+	}
+
+	bool _win;
+	void CheckHP ()
+	{
+		for ( var s=0; s!=10; s++ )
+		{
+			if (hp > s) splatters[s].SetActive ( true );
+			else		splatters[s].SetActive ( false );
+		}
+
+		if ( hp >= 11 && !_win )
+		{
+			var win = playerType == PlayerType.WASD ? "Hari" : "Eru";
+			var lose = playerType == PlayerType.WASD ? "Eru" : "Hari";
+			_win=true;
+			FindObjectOfType<Game> ().Win ( win, lose );
+		}
+	}
+
+	void CheckFire ()
+	{
+		if (!Input.GetButtonDown ( type+"Fire" ))
+			return;
+
+		anim.SetTrigger ( "Shot" );
+		paint.Play ();
+	}
+
+	int jumps;
+	void CheckJump () 
+	{
+		if (!Input.GetButtonDown ( type+"Jump" ))
+			return;
+		//if ( jumps>=2 ) return;
+
+		// Jump
+		body.AddForceAtPosition ( transform.up * jumpForce, transform.position, ForceMode.VelocityChange );
+		anim.SetTrigger ( "Jump" );
+		grounded = false;
+		jumps++;
 	}
 
 	void Movement () 
 	{
-		// First person movement - tests
-		var mov = Vector3.zero;
-		if ( Input.GetKey ( KeyCode.W ) ) mov += transform.forward;
-		if ( Input.GetKey ( KeyCode.S ) ) mov -= transform.forward;
-		if ( Input.GetKey ( KeyCode.A ) ) mov -= transform.right;
-		if ( Input.GetKey ( KeyCode.D ) ) mov += transform.right;
-		mov = mov.normalized * speed;
+		var x = Input.GetAxis ( type+"Horizontal" )  * speed * Time.deltaTime;
+		if ( x!=0 )
+		{
+			// Move player
+			moving = true;
+			body.position += -Vector3.right * x;
+		}
+		else moving = false;
 
-		player.SimpleMove ( mov );
-	}
-	void RotateCam ()
-	{
-		var cam = Camera.main.transform;
-		cam.Rotate ( cam.right, Input.GetAxis ( "Mouse Y" ) * 270 * Time.deltaTime );
-		transform.Rotate ( cam.up, Input.GetAxis ( "Mouse X" ) * 120 * Time.deltaTime );
-		// fml
-		var euler = transform.localEulerAngles;
-		var euler2 = cam.transform.localEulerAngles;
-		transform.localEulerAngles = new Vector3 ( 0, euler.y, 0 );
-		cam.transform.localEulerAngles = new Vector3 ( euler2.x, 0, 0 );
+		RotationCheck ( (x < 0) ? -1 : 1 );
+		FloorCheck ();
 	}
 
-	void Awake ()
+	int movDirection;
+	void RotationCheck ( float newDir )
 	{
-		player = GetComponent<CharacterController> ();
+		// Going left
+		if ( movDirection==-1 )
+		{
+			// Passing foe
+			if ( transform.position.x > foe.transform.position.x )
+			{
+				transform.rotation *= Quaternion.Euler ( 0, 180, 0 );
+				movDirection=1;
+			}
+		}
+		else
+		// Going right
+		if ( movDirection==1 )
+		{
+			// Passing foe
+			if ( transform.position.x < foe.transform.position.x )
+			{
+				transform.rotation *= Quaternion.Euler ( 0, 180, 0 );
+				movDirection=-1;
+			}
+		}
+
+		anim.SetFloat ( "RunDirection", newDir==movDirection ? 1 : -1 );
+	}
+
+	public LayerMask raycastCollision;
+	void FloorCheck () 
+	{
+		var hit = new RaycastHit ();
+		if ( Physics.Raycast ( transform.position, -transform.up.normalized, out hit, 0.2f, raycastCollision ) )
+		{
+			// Rotate along Z axis to align
+			// to surface
+			var rot = Quaternion.LookRotation ( transform.forward, hit.normal );
+			this.AsyncLerp<Transform> ( "rotation", rot, 0.15f, transform );
+			falling = false;
+			grounded = true;
+			jumps = 0;
+		}
+		else
+		{
+			//transform.Translate ( 0, -9.81f * Time.deltaTime, 0 );
+			grounded = false;
+		}
+	}
+
+	void CheckFall () 
+	{
+		var v = body.velocity;
+		if ( v.y > 0 ) falling = true;
+	}
+
+	void Start () 
+	{
+		body = GetComponent<Rigidbody> ();
+		anim = GetComponent<Animator> ();
+
+		// Eru
+		if (playerType == PlayerType.WASD)
+		{
+			type = "WASD_";
+			movDirection = 1;
+			foe = GameObject.Find ( "Hari" ).GetComponent<Player> ();
+		}
+		else
+		// Hari
+		if (playerType == PlayerType.ARROWS)
+		{
+			type = "ARROWS_";
+			movDirection = -1;
+			foe = GameObject.Find ( "Eru" ).GetComponent<Player> ();
+		}
 	}
 }

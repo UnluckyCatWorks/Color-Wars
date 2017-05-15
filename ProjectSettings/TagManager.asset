@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Painter
   - Paintable
+  - Hari
+  - Eru
   layers:
   - Default
   - TransparentFX

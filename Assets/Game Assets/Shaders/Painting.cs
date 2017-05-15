@@ -39,10 +39,10 @@ public class Painting : MonoBehaviour
 					c.transform.localScale += new Vector3 ( 0.005f, 0.005f, 0 );
 			}
 			else
-			if ( tag == "Player" )
+			if ( tag == gameObject.tag )
 			{
 				var player = cols[i].colliderComponent.transform.parent.GetComponent<Player> ();
-				player.hp += 0.065f;
+				player.hp += 0.075f;
 			}
 		}
 	}

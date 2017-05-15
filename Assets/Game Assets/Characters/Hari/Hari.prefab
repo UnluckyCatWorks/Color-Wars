@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 65078894233399504}
   m_Layer: 11
   m_Name: PaintCollider
-  m_TagString: Paintable
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,11 +170,11 @@ GameObject:
   - component: {fileID: 114070815810894244}
   m_Layer: 8
   m_Name: Hari
-  m_TagString: Player
+  m_TagString: Hari
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1435439672767238
 GameObject:
   m_ObjectHideFlags: 1
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 114871491577706222}
   m_Layer: 11
   m_Name: Paint
-  m_TagString: Untagged
+  m_TagString: Hari
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +925,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409329477339736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.19, y: 1.27, z: 1.48}
+  m_LocalPosition: {x: -13.366, y: 1.477, z: 1.48}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4538266504944320}

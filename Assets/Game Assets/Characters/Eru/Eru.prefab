@@ -153,11 +153,11 @@ GameObject:
   - component: {fileID: 114943686004023192}
   m_Layer: 8
   m_Name: Eru
-  m_TagString: Player
+  m_TagString: Eru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1410598179018144
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 65691236617746242}
   m_Layer: 11
   m_Name: PaintCollider
-  m_TagString: Paintable
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 114170635164136740}
   m_Layer: 11
   m_Name: Paint
-  m_TagString: Untagged
+  m_TagString: Eru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -753,7 +753,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1402674343745740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.35, y: 7.06, z: 1.48}
+  m_LocalPosition: {x: 13.94, y: 1.544, z: 1.48}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.3493229}
   m_Children:
   - {fileID: 4968898697506446}
@@ -1092,7 +1092,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415380216507084}
   serializedVersion: 5
-  lengthInSec: 0.2
+  lengthInSec: 0.5
   simulationSpeed: 1
   looping: 0
   prewarm: 0

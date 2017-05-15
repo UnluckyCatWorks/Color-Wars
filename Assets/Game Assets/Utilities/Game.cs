@@ -27,6 +27,8 @@ public class Game : MonoBehaviour
 
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
+
+		Time.timeScale = 1;
 	}
 
 	public void Exit () { Application.Quit (); }
@@ -44,9 +46,16 @@ public class Game : MonoBehaviour
 		GameObject.Find ( "happy" + win ).SetActive ( true );
 		GameObject.Find ( "sad" + win ).SetActive ( false );
 
+		int count=0;
 		for ( int i=0; i!=2; i++ )
 		{
-			txts[i].text = ( (int) Mathf.Clamp(pjs[i].hp * 10, 0, 100) ).ToString ()  + " %";
+			var n = (int) Mathf.Clamp ( (10f - pjs[i].hp) * 10, 0, 100 );
+			if (n==0) count++;
+			if ( count==2 )
+			{
+				GameObject.Find ( "eru%" ).GetComponent<Text> ().text = "1 %";
+			}
+			else txts[i].text = n.ToString () + " %";
 		}
 	}
 

@@ -1,4 +1,4 @@
-﻿Shader "Hidden/AlphaColorSwitch"
+﻿Shader "Hidden/test"
 {
 	Properties
 	{
@@ -6,12 +6,8 @@
 	}
 	SubShader
 	{
-		Tags { "Queue"="Transparent" }
-
 		// No culling or depth
-		Cull Off
-		ZWrite Off
-		ZTest Always
+		Cull Off ZWrite Off ZTest Always
 
 		Pass
 		{
@@ -46,12 +42,8 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
-
-				// This lines generates a Black&White version of the screen
-				fixed3 bnw = dot(col.rgb, float3(0.3, 0.59, 0.11));
-				// Switch between B&W and Color based on alpha channel
-				col.rgb = lerp(bnw, col.rgb, col.a);
-
+				// just invert the colors
+				col = 1 - col;
 				return col;
 			}
 			ENDCG

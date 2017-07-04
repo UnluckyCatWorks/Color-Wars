@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MAT_stone_r
-  m_Shader: {fileID: 4800000, guid: 3e148b30618700f47a4724cf8cb2848e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 927ae5a9d279faf4f9ec96c49ff871eb, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
